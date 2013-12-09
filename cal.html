@@ -1,0 +1,233 @@
+
+<div data-bb-type="screen" data-bb-effect="fade" id="view" >
+	<div data-bb-type="title" data-bb-caption="Cal"></div>
+		
+	<div data-bb-type="image-list"  id="displayCal">
+						
+	</div> 
+		 
+	<div data-bb-type="action-bar" data-bb-back-caption="Home">
+			
+		<div data-bb-type="action" data-bb-style="button" data-bb-overflow="false" data-bb-img="images/tab_1.png" onclick="showEditScreen()">Edit/Add</div>
+		<div data-bb-type="action" data-bb-style="button" data-bb-selected="true" data-bb-img="images/tab_2.png" onclick="showViewScreen()">View All</div>		
+	</div>
+</div>
+
+
+<div data-bb-type="screen" data-bb-effect="fade" id="edit">
+	<div data-bb-type="title" data-bb-caption="Add"></div>
+	<div data-bb-type="scroll-panel" style="height:990px"  id="scroll">
+	 
+		<div data-bb-type="label-control-container">
+			<div data-bb-type="row">
+				<div data-bb-type="label"></div>
+				<input type="text" placeholder="Course Name" id="className">
+			</div>  
+
+			<div data-bb-type="row">
+				<div data-bb-type="label"></div>
+				<input type="text" placeholder="Classroom Number" id="classRoom">
+			</div>
+		</div>
+
+			
+				<select data-bb-style="stretch" id="day">
+		            <option value="monday" selected="true">Monday</option>
+		            <option value="tuesday">Tuesday</option>
+		            <option value="wednesday">Wednesday</option>
+		            <option value="thursday">Thursday</option>
+		            <option value="firday">Friday</option>
+      			</select>
+			
+				<select data-bb-style="stretch" id="when">
+		            <option value="8:00 am" selected="true">8:00 AM</option>
+		            <option value="8:30 am">8:30 AM</option>
+		            <option value="9:00 am">9:00 AM</option>
+		            <option value="9:30 am">9:30 AM</option>
+		            <option value="10:00 am">10:00 AM</option>
+		            <option value="10:30 am">10:30 AM</option>
+		            <option value="11:00 am">11:00 AM</option>
+		            <option value="11:30 am">11:30 AM</option>
+		            <option value="12:00 pm">12:00 PM</option>
+		            <option value="12:30 pm">12:30 PM</option>
+		            <option value="1:00 pm">1:00 PM</option>
+		            <option value="1:30 pm">1:30 PM</option>
+		            <option value="2:00 pm">2:00 PM</option>
+		            <option value="2:30 pm">2:30 PM</option>
+		            <option value="3:00 pm">3:00 PM</option>
+		            <option value="3:30 pm">3:30 PM</option>
+		            <option value="4:00 pm">4:00 PM</option>
+		            <option value="4:30 pm">4:30 PM</option>
+		            <option value="5:00 pm">5:00 PM</option>
+		            <option value="5:30 pm">5:30 PM</option>
+		            <option value="6:00 pm">6:00 PM</option>
+		            <option value="6:30 pm">6:30 PM</option>
+		            <option value="7:00 pm">7:00 PM</option>
+		            <option value="7:30 pm">7:30 PM</option>
+		            <option value="8:00 pm">8:00 PM</option>
+		            <option value="8:30 pm">8:30 PM</option>
+		            <option value="9:00 pm">9:00 PM</option>
+		            <option value="9:30 pm">9:30 PM</option>
+		            <option value="10:00 pm">10:00 PM</option>
+      			</select>
+			
+				<select data-bb-style="stretch"  id="howLong">
+		            <option value="1 hour" selected="true">1 Hour</option>
+		            <option value="1 hour 30 min">1 Hour 30 Min</option>
+		            <option value="2 hours">2 Hours</option>
+		            <option value="2 hours 30 min">2 Hours 30 Min</option>
+		            <option value="3hours">3 Hours</option>
+		            <option value="3 hours 30 min">3 Hours 30 Min</option>
+		            <option value="4 hours">4 Hours</option>
+		            <option value="4 hours 30 min">4 Hours 30 Min</option>
+      			</select>
+			<div>
+				<p id="toggleHeader"> This class is a lab: </p>
+				<div data-bb-type="toggle" id="classOrLabToggle" data-bb-on="Yes" data-bb-off="No" onchange="reminderToggleChanged()"></div>
+			</div>
+				<select data-bb-style="stretch" id="reminder">
+		            <option value="15 min" selected="true">15 Min</option>
+		            <option value="30 min">30 Min</option>
+		            <option value="45 min">45 Min</option>
+		            <option value="1 hour">1 Hour</option>
+		            <option value="2 hours">2 Hours</option>
+		            <option value="3 hours">3 Hours</option>
+		            <option value="4 hours">4 Hours</option>
+		            <option value="5 hours">5 Hours</option>
+		            <option value="6 hours">6 Hours</option>
+      			</select>
+			
+				<div data-bb-type="toggle" id="reminderToggle" data-bb-on="Yes" data-bb-off="No" onchange="reminderToggleChanged()"> 
+				</div>
+	
+					<div data-bb-type="button" onclick="saveToCal()" id="saveToCal" > Save to Calendar </div>
+					<div data-bb-type="button" onclick="delete()" id="delete" > Delete </div>	
+				
+			</div>
+			
+	<div data-bb-type="action-bar" data-bb-back-caption="Home">
+	
+		<div data-bb-type="action" data-bb-style="button" data-bb-overflow="false" data-bb-img="images/tab_1.png" onclick="showEditScreen()">Edit/Add</div>
+		<div data-bb-type="action" data-bb-style="button" data-bb-selected="true" data-bb-img="images/tab_2.png" onclick="showViewScreen()">View All</div>
+
+	</div>	
+</div>
+
+
+
+ 
+
+
+
+
+
+
+<!-- <div data-bb-type="screen" data-bb-effect="fade" id="timeTable2">
+	<div data-bb-type="title" data-bb-caption="Add"></div>
+	<div data-bb-type="scroll-panel" style="height:990px"  id="scroll">
+	 
+		<div data-bb-type="label-control-container">
+		
+			<div data-bb-type="row">
+				<div data-bb-type="label"></div>
+				<input type="text" placeholder="Course Name" id="first">
+			</div>  
+			<div data-bb-type="row">
+				<div data-bb-type="label"></div>
+				<input type="text" placeholder="Classroom Number" id="last">
+			</div>
+			<div data-bb-type="row">
+				<div data-bb-type="label"></div>
+				<select data-bb-style="stretch" onchange="alert('changed')" id="day">
+		            <option value="monday" selected="true">Monday</option>
+		            <option value="tuesday">Tuesday</option>
+		            <option value="wednesday">Wednesday</option>
+		            <option value="thursday">Thursday</option>
+		            <option value="firday">Friday</option>
+      			</select>
+			</div>
+			<div data-bb-type="row"> 
+				<div data-bb-type="label"></div> 
+				<select data-bb-style="stretch" onchange="alert('changed')" id="hour">
+		            <option value="8:00 am" selected="true">8:00 AM</option>
+		            <option value="8:30 am">8:30 AM</option>
+		            <option value="9:00 am">9:00 AM</option>
+		            <option value="9:30 am">9:30 AM</option>
+		            <option value="10:00 am">10:00 AM</option>
+		            <option value="10:30 am">10:30 AM</option>
+		            <option value="11:00 am">11:00 AM</option>
+		            <option value="11:30 am">11:30 AM</option>
+		            <option value="12:00 pm">12:00 PM</option>
+		            <option value="12:30 pm">12:30 PM</option>
+		            <option value="1:00 pm">1:00 PM</option>
+		            <option value="1:30 pm">1:30 PM</option>
+		            <option value="2:00 pm">2:00 PM</option>
+		            <option value="2:30 pm">2:30 PM</option>
+		            <option value="3:00 pm">3:00 PM</option>
+		            <option value="3:30 pm">3:30 PM</option>
+		            <option value="4:00 pm">4:00 PM</option>
+		            <option value="4:30 pm">4:30 PM</option>
+		            <option value="5:00 pm">5:00 PM</option>
+		            <option value="5:30 pm">5:30 PM</option>
+		            <option value="6:00 pm">6:00 PM</option>
+		            <option value="6:30 pm">6:30 PM</option>
+		            <option value="7:00 pm">7:00 PM</option>
+		            <option value="7:30 pm">7:30 PM</option>
+		            <option value="8:00 pm">8:00 PM</option>
+		            <option value="8:30 pm">8:30 PM</option>
+		            <option value="9:00 pm">9:00 PM</option>
+		            <option value="9:30 pm">9:30 PM</option>
+		            <option value="10:00 pm">10:00 PM</option>
+      			</select>
+			</div>
+			<div data-bb-type="row">  
+				<div data-bb-type="label"></div>
+				<select data-bb-style="stretch" onchange="alert('changed')" id="time">
+		            <option value="1 hour" selected="true">1 Hour</option>
+		            <option value="1 hour 30 min">1 Hour 30 Min</option>
+		            <option value="2 hours">2 Hours</option>
+		            <option value="2 hours 30 min">2 Hours 30 Min</option>
+		            <option value="3hours">3 Hours</option>
+		            <option value="3 hours 30 min">3 Hours 30 Min</option>
+		            <option value="4 hours">4 Hours</option>
+		            <option value="4 hours 30 min">4 Hours 30 Min</option>
+      			</select>
+			</div>
+			<div data-bb-type="row">  
+				<div data-bb-type="label">This Class is a Lab: </div>
+				<div data-bb-type="toggle" data-bb-checked="true" data-bb-on="Yes" data-bb-off="No" onchange="doSomething(this)"></div>
+			</div>
+			<div data-bb-type="row">  
+				<div data-bb-type="label"></div>
+				<select data-bb-style="stretch" onchange="alert('changed')" id="reminder">
+		            <option value="15 min" selected="true">15 Min</option>
+		            <option value="30 min">30 Min</option>
+		            <option value="45 min">45 Min</option>
+		            <option value="1 hour">1 Hour</option>
+		            <option value="2 hours">2 Hours</option>
+		            <option value="3 hours">3 Hours</option>
+		            <option value="4 hours">4 Hours</option>
+		            <option value="5 hours">5 Hours</option>
+		            <option value="6 hours">6 Hours</option>
+      			</select>
+      			<div data-bb-type="toggle" data-bb-checked="true" data-bb-on="Yes" data-bb-off="No" onchange="doSomething(this)"> </div>
+			</div>
+			<div data-bb-type="row">  
+				<div data-bb-type="label"></div>
+				<div data-bb-type="button" onclick="saveToCal" id="saveToCal" > Save to Calendar</div>
+				<div data-bb-type="button" onclick="delete" id="delete" > Delete</div>
+			</div>
+		</div>	
+	</div>
+		
+	<div data-bb-type="action-bar" data-bb-back-caption="Home">
+	
+		<div data-bb-type="action" data-bb-style="button" data-bb-overflow="false" data-bb-img="images/tab_1.png" onclick="showScreenTwo()">Edit/Add</div>
+		<div data-bb-type="action" data-bb-style="button" data-bb-selected="true" data-bb-img="images/tab_2.png" onclick="showScreenOne()">View All</div>
+
+	</div>	
+</div>
+
+
+
+  -->

@@ -1,0 +1,61 @@
+
+<div data-bb-type="screen" data-bb-effect="fade" id="tab1" >
+	<div data-bb-type="title" data-bb-caption="All Contacts"></div>
+	
+	<div data-bb-type="image-list"  id="displayData">
+					
+	</div> 
+	 
+	<div data-bb-type="action-bar" data-bb-back-caption="Home">
+			<div data-bb-type="action" data-bb-style="button" data-bb-overflow="false" data-bb-img="images/tab_1.png" onclick="showScreenTwo()">show 1</div>
+			<div data-bb-type="action" data-bb-style="button" data-bb-selected="true" data-bb-img="images/tab_2.png" onclick="showScreenOne()">show 2</div>
+	</div>
+</div>
+
+<div data-bb-type="screen" data-bb-effect="fade" id="tab2">
+	<div data-bb-type="title" data-bb-caption="Add A Contact"></div>
+		<div data-bb-type="scroll-panel" style="height:990px"  id="scroll">
+		 
+			<div data-bb-type="label-control-container">
+			
+				<div data-bb-type="row">
+				  <div data-bb-type="label">*First Name:</div>
+				  <input type="text" placeholder="Joe" id="first">
+				</div>  
+				<div data-bb-type="row">
+				  <div data-bb-type="label">*Last Name:</div>
+				  <input type="text" placeholder="Smith" id="last">
+				</div>
+				<div data-bb-type="row">
+				  <div data-bb-type="label">*Home Phone:</div>
+				  <input type="text" placeholder="(area code)-253-8764" id="homePhone">
+				</div>
+				<div data-bb-type="row">  
+				  <div data-bb-type="label">Mobile Phone:</div>
+				  <input type="text" placeholder="(area code)-253-8764" id="mobilePhone">
+				</div>
+				<div data-bb-type="row">  
+				  <div data-bb-type="label">*Home email:</div>
+				  <input type="text" placeholder="example@hotmail.com" id="homeEmail">
+				</div>
+				<div data-bb-type="row">  
+				  <div data-bb-type="label">Work email:</div>
+				  <input type="text" placeholder="example@algonquin.com" id="schoolEmail">
+				</div>
+				<div data-bb-type="row">  
+				  <div data-bb-type="label">*How you met:</div>
+				  <input type="text" placeholder="Bumped into them" id="description">
+				</div>
+				<div data-bb-type="button" onclick="createContact()">Submit </div>
+			</div>	
+		</div>
+		
+		<div data-bb-type="action-bar" data-bb-back-caption="Home">
+		
+			<div data-bb-type="action" data-bb-style="button" data-bb-overflow="false" data-bb-img="images/tab_1.png" onclick="showScreenTwo()">show 1</div>
+			<div data-bb-type="action" data-bb-style="button" data-bb-selected="true" data-bb-img="images/tab_2.png" onclick="showScreenOne()">show 2</div>
+	
+		</div>	
+</div>
+
+

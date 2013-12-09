@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#grid{
+	margin-top:25px;	
+}
+.gridRow{
+	margin-top:50px;	
+}
+
+#gridHeader{
+	font-size:50px;
+	height:100px;	
+}
+
+#toggleHeader{
+	display:inline;
+}
+
+#classOrLabToggle{
+	display: inline;
+}
+
+#contactAvatarImg{
+	width:100px;
+	height:100px;
+}
+

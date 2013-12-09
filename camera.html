@@ -1,0 +1,35 @@
+<body>
+<video id="video"></video>
+<canvas id="canvas"></canvas>
+<button id="snap">Take a Picture!</button>
+
+<script>
+  window.addEventListener('load', function() {
+	  alert("loaded");
+    navigator.webkitGetUserMedia( {video: true, audio: true},
+      function (stream){
+        // handle the stream
+        var video = document.getElementById("video");
+        video.autoplay = true;
+        video.src = window.webkitURL.createObjectURL(stream);
+      },function (err){
+        //handle the error
+       alert( "Error getting the video stream: " + err );
+  })});
+
+  var but = document.getElementById("snap");
+  but.addEventListener("click", takePicture, false);
+
+  function takePicture(){
+    var canvas = document.getElementById("canvas");
+    var context = canvas.getContext("2d");
+    video = document.getElementById("video");
+    canvas.height = video.videoHeight/2;
+    canvas.width = video.videoWidth/2;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    var url = canvas.toDataURL();
+}
+</script>
+</body>
+	
+

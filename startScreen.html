@@ -1,0 +1,29 @@
+
+<div data-bb-type="screen" data-bb-effect="fade" >
+    <div data-bb-type="title" data-bb-caption="My Planner"></div>
+    				
+    <div data-bb-type="grid-layout" id="grid">
+
+        <div data-bb-type="row" class="gridRow">
+            <div data-bb-type="item" data-bb-img="images/contact.png" data-bb-title="My Contacts" onclick="bb.pushScreen('contacts.html', 'inputContacts')"></div>
+            <div data-bb-type="item" data-bb-img="images/services.png" data-bb-title="Campus Services" onclick="bb.pushScreen('campusServices.html','campusServices')"></div> 
+        </div>
+                  
+        <div data-bb-type="row" class="gridRow">
+            <div data-bb-type="item" data-bb-img="images/GoingPlaces.png" data-bb-title="Going Places" onClick="getBusRoute()"></div>
+            <div data-bb-type="item" data-bb-img="images/SeeingThings.png" data-bb-title="Things I've Seen"></div> 
+        </div>
+                  
+        <div data-bb-type="row" class="gridRow">
+            <div data-bb-type="item" data-bb-img="images/questionMark.png" data-bb-title="Where am I?"></div>		
+            <div data-bb-type="item" data-bb-img="images/favorites.png" data-bb-title="Favorite Places" onClick="startGeolocation()"></div> 
+        </div>
+        		  
+        <div data-bb-type="row" class="gridRow">
+            <div data-bb-type="item" data-bb-img="images/calendar.png" data-bb-title="My Timetable" onclick="bb.pushScreen('cal.html', 'inputContacts')"></div> 
+            <div data-bb-type="item" data-bb-img="images/toDoList.png" data-bb-title="Things To Do!" ></div> 
+        </div>
+    </div>
+</div>
+
+	
